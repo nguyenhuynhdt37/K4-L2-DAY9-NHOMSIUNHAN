@@ -1,8 +1,16 @@
-CVAT task reference — thay mọi placeholder mới là xong.
+CVAT task reference — GTSDB Traffic Sign Segmentation (Group SiuNhan)
 
-CVAT version: TODO
-Task calibration (tên, id): TODO
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): TODO
-Guideline version dán trong Guide của task: TODO
-Ghi chú cho người tiếp nhận: TODO
+CVAT Server URL: https://cvat.itup.io.vn/
+Project Name: SiuNhan (Project ID: 8)
+Owner Account: nhomsieunhan (ID: 6) / Pass: Sieunhan12345
+API Token: d2f83f61aa9e2aadb289cc8920a97d0e452ecc98 (Personal Access Key: mkzzE3TM.8MzzaA6nfd5lMbIuDhH2F4ZW6Nltz3gp)
+
+Danh sách Tasks của nhóm trên CVAT:
+- Task1 (ID: 12) - Frame 0..6 (Job 16)
+- Task2 (ID: 14) - Frame 0..6 (Job 18)
+- Task3 (ID: 15) - Frame 0..6 (Job 19)
+- Task4 (ID: 16) - Frame 0..6 (Job 20)
+
+Guideline version dán trong Guide của task: Version v2 (02_guideline.md)
+File export đã nộp (đường dẫn trong repo): project/07_blind_handoff/peer_output/peer_submission.zip
+Ghi chú cho người tiếp nhận: Đã kết nối và lấy thành công annotations của toàn bộ 28 ảnh GTSDB từ 4 Tasks trên server https://cvat.itup.io.vn/.
