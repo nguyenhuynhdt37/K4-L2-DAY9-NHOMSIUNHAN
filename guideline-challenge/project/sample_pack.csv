@@ -1,16 +1,19 @@
 sample_id,split,tags,reason
-BDD01,example,normal,Ảnh ví dụ cơ bản đèn giao thông ban ngày
-BDD02,example,normal;occlusion,Ảnh ví dụ đèn bị che khuất nhẹ ban ngày
-BDD03,example,edge,Ảnh ví dụ góc nhìn nghiêng
-BDD04,calibration,normal,Thử nghiệm gán nhãn đèn giao thông phố ban ngày
-BDD05,calibration,edge,Thử nghiệm gán nhãn đèn giao thông cao tốc
-BDD06,calibration,occlusion;edge,Thử nghiệm gán nhãn đèn bị che khuất tán cây
-BDD07,calibration,critical,Thử nghiệm gán nhãn nhiều đầu đèn ngã tư
-BDD08,calibration,ambiguity,Thử nghiệm đèn xa khó phân biệt
-BDD09,calibration,normal,Thử nghiệm góc nhìn thẳng
-BDD10,calibration,edge,Thử nghiệm giao lộ nhiều làn
-BDD11,blind,normal,Kiểm tra gán nhãn tiêu chuẩn ban ngày
-BDD12,blind,edge,Kiểm tra gán nhãn góc nghiêng khó
-BDD13,blind,edge,Kiểm tra gán nhãn bị che khuất
-BDD14,blind,critical,Kiểm tra lỗi bỏ sót đèn đỏ trực tiếp điều khiển xe mình
-BDD15,blind,ambiguity,Kiểm tra xử lý trường hợp lóa sáng nghi ngờ
+GTS01,example,normal,Ví dụ biển Cấm chuẩn rõ ràng
+GTS02,example,edge,Ví dụ biển Nguy hiểm bị cắt ở mép ảnh
+GTS05,example,edge;occlusion,Ví dụ biển Chỉ dẫn bị che khuất bởi tán cây
+GTS08,example,normal;critical,Ví dụ chùm biển báo gồm 1 biển Cấm và 1 biển Phụ
+GTS12,example,small_far;ambiguity,Ví dụ biển báo mờ xa vỡ hạt gán class other
+GTS18,example,edge;ambiguity,Ví dụ biển báo quay mặt lưng màu xám gán class other
+GTS03,calibration,normal,Kiểm tra khả năng phân loại biển Cấm của annotator
+GTS04,calibration,normal,Kiểm tra phân loại biển Nguy hiểm
+GTS06,calibration,occlusion;edge,Kiểm tra vẽ polygon khi biển bị che 20%
+GTS07,calibration,small_far,Kiểm tra bật attribute blurred cho biển xa
+GTS09,calibration,critical;edge,Kiểm tra gán attribute truncated sát rìa ảnh
+GTS10,calibration,normal,Kiểm tra biển Chỉ dẫn mảng lớn
+GTS11,calibration,ambiguity;edge,Kiểm tra gán nhãn biển phụ kèm biển chính
+GTS13,blind,normal,Ảnh blind normal biển báo rõ ràng
+GTS14,blind,edge;occlusion,Ảnh blind biển báo bị cây che khuất
+GTS15,blind,critical;edge,Ảnh blind biển báo bị cắt ranh giới ở mép
+GTS16,blind,ambiguity;small_far,Ảnh blind biển nhỏ xa không rõ loại
+GTS17,blind,critical;ambiguity,Ảnh blind tranh chấp trường hợp lóa sáng

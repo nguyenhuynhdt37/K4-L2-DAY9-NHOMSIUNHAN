@@ -1,25 +1,148 @@
 [
   {
-    "name": "traffic_light",
+    "name": "prohibitory",
+    "color": "#E53935",
+    "type": "any",
     "attributes": [
       {
-        "name": "color",
-        "input_type": "select",
-        "mutable": false,
-        "values": ["__undefined__", "red", "yellow", "green", "off", "unknown"]
+        "name": "occluded",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
       },
       {
-        "name": "relevance",
-        "input_type": "select",
-        "mutable": false,
-        "values": ["__undefined__", "controlling_my_lane", "other_lane", "unknown"]
+        "name": "truncated",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
       },
       {
-        "name": "occlusion",
-        "input_type": "select",
-        "mutable": false,
-        "values": ["none", "partially", "heavily"]
+        "name": "blurred",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
       }
     ]
+  },
+  {
+    "name": "mandatory",
+    "color": "#1E88E5",
+    "type": "any",
+    "attributes": [
+      {
+        "name": "occluded",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "truncated",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "blurred",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      }
+    ]
+  },
+  {
+    "name": "danger",
+    "color": "#FB8C00",
+    "type": "any",
+    "attributes": [
+      {
+        "name": "occluded",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "truncated",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "blurred",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      }
+    ]
+  },
+  {
+    "name": "supplementary",
+    "color": "#8E24AA",
+    "type": "any",
+    "attributes": [
+      {
+        "name": "occluded",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "truncated",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "blurred",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      }
+    ]
+  },
+  {
+    "name": "other",
+    "color": "#757575",
+    "type": "any",
+    "attributes": [
+      {
+        "name": "occluded",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "truncated",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      },
+      {
+        "name": "blurred",
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": ["false"],
+        "mutable": false
+      }
+    ]
+  },
+  {
+    "name": "image_escalate",
+    "color": "#D81B60",
+    "type": "tag",
+    "attributes": []
   }
 ]
