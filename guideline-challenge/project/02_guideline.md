@@ -1,6 +1,6 @@
 # Annotation Guideline — Traffic Sign Segmentation (GTSDB)
 
-**Version:** v2
+**Version:** v3 (Cập nhật sau Peer Feedback & Blind Handoff)
 
 ---
 
