@@ -1,1 +1,11 @@
 sample_id,decision_id,expected,severity,rationale
+BDD11,d1,label=traffic_light color=green relevance=controlling_my_lane x1,major,Đèn tín hiệu giao thông chính góc nhìn thẳng làn xe mình đang chạy
+BDD11,d2,geometry:box sát vỏ housing đầu đèn BDD11 lệch <= 2px,minor,Kiểm tra độ chính xác của Bounding Box ôm sát phần vỏ đầu đèn
+BDD12,d1,label=traffic_light color=red relevance=controlling_my_lane x1,critical,Bắt buộc khoanh gán nhãn đèn đỏ điều khiển làn đường tránh lỗi False Negative nghiêm trọng
+BDD12,d2,label=traffic_light color=green relevance=other_lane x1,major,Phân biệt đầu đèn xanh ở làn phụ bên phải không điều khiển làn xe mình
+BDD13,d1,label=traffic_light color=red relevance=controlling_my_lane occlusion=partially x1,critical,Đèn đỏ bị tán cây che một phần bắt buộc phải khoanh nhãn do ảnh hưởng trực tiếp đến an toàn
+BDD13,d2,label=traffic_light color=yellow relevance=other_lane x1,minor,Đèn vàng ở làn rẽ nhánh
+BDD14,d1,label=traffic_light color=red relevance=controlling_my_lane x2,critical,Hai đầu đèn đỏ đôi treo trên ngã tư điều khiển trực tiếp làn xe mình
+BDD14,d2,geometry:hai box riêng biệt sát vỏ hai đầu đèn không gộp chung,major,Khung geometry cho hai đầu đèn giao thông độc lập
+BDD15,d1,label=traffic_light color=unknown relevance=controlling_my_lane x1,major,Trường hợp lóa ánh mặt trời không rõ màu sắc bóng đèn chọn color=unknown
+BDD15,d2,label=traffic_light color=off relevance=other_lane x1,minor,Đèn phụ góc xa ở trạng thái tắt

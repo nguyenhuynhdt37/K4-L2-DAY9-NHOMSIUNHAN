@@ -1,1 +1,16 @@
 sample_id,split,tags,reason
+BDD01,example,normal,Ảnh ví dụ cơ bản đèn giao thông ban ngày
+BDD02,example,normal;occlusion,Ảnh ví dụ đèn bị che khuất nhẹ ban ngày
+BDD03,example,edge,Ảnh ví dụ góc nhìn nghiêng
+BDD04,calibration,normal,Thử nghiệm gán nhãn đèn giao thông phố ban ngày
+BDD05,calibration,edge,Thử nghiệm gán nhãn đèn giao thông cao tốc
+BDD06,calibration,occlusion;edge,Thử nghiệm gán nhãn đèn bị che khuất tán cây
+BDD07,calibration,critical,Thử nghiệm gán nhãn nhiều đầu đèn ngã tư
+BDD08,calibration,ambiguity,Thử nghiệm đèn xa khó phân biệt
+BDD09,calibration,normal,Thử nghiệm góc nhìn thẳng
+BDD10,calibration,edge,Thử nghiệm giao lộ nhiều làn
+BDD11,blind,normal,Kiểm tra gán nhãn tiêu chuẩn ban ngày
+BDD12,blind,edge,Kiểm tra gán nhãn góc nghiêng khó
+BDD13,blind,edge,Kiểm tra gán nhãn bị che khuất
+BDD14,blind,critical,Kiểm tra lỗi bỏ sót đèn đỏ trực tiếp điều khiển xe mình
+BDD15,blind,ambiguity,Kiểm tra xử lý trường hợp lóa sáng nghi ngờ

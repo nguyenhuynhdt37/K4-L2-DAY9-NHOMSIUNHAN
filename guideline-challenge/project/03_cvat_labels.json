@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "name": "traffic_light",
+    "attributes": [
+      {
+        "name": "color",
+        "input_type": "select",
+        "mutable": false,
+        "values": ["__undefined__", "red", "yellow", "green", "off", "unknown"]
+      },
+      {
+        "name": "relevance",
+        "input_type": "select",
+        "mutable": false,
+        "values": ["__undefined__", "controlling_my_lane", "other_lane", "unknown"]
+      },
+      {
+        "name": "occlusion",
+        "input_type": "select",
+        "mutable": false,
+        "values": ["none", "partially", "heavily"]
+      }
+    ]
+  }
+]
