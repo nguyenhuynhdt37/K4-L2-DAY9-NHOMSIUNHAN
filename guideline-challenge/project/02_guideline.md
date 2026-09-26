@@ -129,6 +129,9 @@ Task này thực hiện trên dữ liệu ảnh tĩnh (Single frames GTSDB).
    - *Cách khắc phục:* Các biển chỉ hướng di chuyển tới Quận A/Quận B có kèm mũi tên/làn xe được xếp vào nhóm `mandatory` (Chỉ dẫn).
 3. **Lỗi 3: Khoanh gộp Cột/Trụ đỡ biển báo.**
    - *Cách khắc phục:* Chỉ vẽ bám sát viền tấm kim loại mặt biển báo ($\le 2\text{ px}$).
-4. **Tiêu chuẩn QA:**
+4. **Lỗi 4 (CỰC KỲ PHỔ BIẾN): Bỏ sót thuộc tính `occluded = true` khi biển bị che khuất.**
+   - *Cách khắc phục:* **QUY TẮC VÀNG CHỐNG BỎ SÓT OCCLUDED**: Bất kỳ biển báo nào có vật cản (tán cây, cành lá, dây điện, cột đèn, giá treo, hoặc biển báo khác đè lên, hoặc quay mặt lưng) che đè lên $\ge 5\%$ diện tích mặt biển $\rightarrow$ **BẮT BUỘC bật `occluded = true`**. Thực hiện Checklist 3 giây soi viền mặt biển trước khi bấm Save.
+5. **Tiêu chuẩn QA:**
    - IoU giữa các Annotator $\ge 85\%$.
    - Tỷ lệ đúng Class = 100% đối với các biển rõ ràng.
+   - Tỷ lệ lọt lỗi bỏ sót `occluded` = 0% (Critical Quality Gate).
