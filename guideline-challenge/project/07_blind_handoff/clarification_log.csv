@@ -1,1 +1,3 @@
 time,asker,question,answered_how,guideline_change
+2026-09-26T10:15:00Z,Peer_Annotator1,"Biển báo bị cành cây che khuất khoảng 15% bề mặt có cần tích thuộc tính occluded=true không?","Trả lời: Có. Mọi biển báo bị che khuất từ 10% đến 90% diện tích bề mặt đều phải gán nhãn và tích thuộc tính occluded=true.","Bổ sung quy định rõ ràng về ngưỡng che khuất 10%-90% vào Guideline v3"
+2026-09-26T11:30:00Z,Peer_Annotator2,"Biển hình chữ nhật chữ đen nền trắng đặt bên dưới biển cấm thuộc lớp nhãn nào?","Trả lời: Gán nhãn supplementary và bao sát viền mặt biển phụ.","Cập nhật ví dụ và quy tắc nhận diện biển báo phụ supplementary vào Guideline v3"

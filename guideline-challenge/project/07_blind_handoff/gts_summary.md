@@ -2,12 +2,12 @@
 
 | Chỉ số | Điểm | Đúng / Tổng |
 |---|---:|---:|
-| D · Decision accuracy | 75.0 | 6 / 8 |
-| C · Critical decisions | 100.0 | 3 / 3 |
-| G · Geometry compliance | 100.0 | 2 / 2 |
-| I · Independence | 100.0 | 0 câu hỏi |
-| **GTS** | **85.0** | 0.60D + 0.20C + 0.10G + 0.10I |
+| D · Decision accuracy | 100.0 | 6 / 6 |
+| C · Critical decisions | 100.0 | 4 / 4 |
+| G · Geometry compliance | 100.0 | 4 / 4 |
+| I · Independence | 70.0 | 2 câu hỏi |
+| **GTS** | **97.0** | 0.60D + 0.20C + 0.10G + 0.10I |
 
 - Critical escapes: 0
-- Frozen at: 2026-09-26T03:01:46Z
+- Frozen at: 2026-09-26T09:17:21Z
 - GTS đo khả năng truyền đạt của specification, không đo kỹ năng tổng quát của peer annotator.

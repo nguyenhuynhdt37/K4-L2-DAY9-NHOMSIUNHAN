@@ -1,11 +1,11 @@
 sample_id,decision_id,expected,severity,kind,peer_evidence,correct,note
-BDD11,d1,label=traffic_light color=green relevance=controlling_my_lane x1,major,decision,traffic_light [color=green;occlusion=none;relevance=controlling_my_lane],1,Khớp đúng label và attribute
-BDD11,d2,geometry:box sát vỏ housing đầu đèn BDD11 lệch <= 2px,minor,geometry,traffic_light [color=green;occlusion=none;relevance=controlling_my_lane],1,Geometry khoanh chuẩn sát vỏ
-BDD12,d1,label=traffic_light color=red relevance=controlling_my_lane x1,critical,decision,traffic_light [color=green;occlusion=none;relevance=other_lane] | traffic_light [color=red;occlusion=none;relevance=controlling_my_lane],1,Nhận diện đúng đèn đỏ điều khiển làn
-BDD12,d2,label=traffic_light color=green relevance=other_lane x1,major,decision,traffic_light [color=green;occlusion=none;relevance=other_lane] | traffic_light [color=red;occlusion=none;relevance=controlling_my_lane],1,Phân biệt đúng đèn làn phụ
-BDD13,d1,label=traffic_light color=red relevance=controlling_my_lane occlusion=partially x1,critical,decision,traffic_light [color=red;occlusion=partially;relevance=controlling_my_lane],1,Xử lý chuẩn trường hợp che khuất một phần
-BDD13,d2,label=traffic_light color=yellow relevance=other_lane x1,minor,decision,traffic_light [color=red;occlusion=partially;relevance=controlling_my_lane],0,Bỏ sót đèn vàng làn rẽ nhánh do góc che khuất
-BDD14,d1,label=traffic_light color=red relevance=controlling_my_lane x2,critical,decision,traffic_light [color=red;occlusion=none;relevance=controlling_my_lane]×2,1,Khoanh đủ 2 đầu đèn đỏ
-BDD14,d2,geometry:hai box riêng biệt sát vỏ hai đầu đèn không gộp chung,major,geometry,traffic_light [color=red;occlusion=none;relevance=controlling_my_lane]×2,1,Tách đúng 2 box riêng biệt
-BDD15,d1,label=traffic_light color=unknown relevance=controlling_my_lane x1,major,decision,traffic_light [color=unknown;occlusion=none;relevance=controlling_my_lane],1,Xử lý đúng lóa sáng color=unknown
-BDD15,d2,label=traffic_light color=off relevance=other_lane x1,minor,decision,traffic_light [color=unknown;occlusion=none;relevance=controlling_my_lane],0,Bỏ sót đèn tắt ở xa
+GTS13,d1,label=prohibitory occluded=false truncated=false blurred=false x1,critical,decision,prohibitory [blurred=false;occluded=false;truncated=false]×1,1,Khớp hoàn toàn nhãn và attribute
+GTS13,d2,geometry:polygon ôm sát viền mặt biển GTS13 lệch <= 2px,major,geometry,prohibitory [blurred=false;occluded=false;truncated=false]×1,1,Polygon ôm sát viền
+GTS14,d1,label=danger occluded=true truncated=false blurred=false x1,critical,decision,danger [blurred=false;occluded=true;truncated=false]×1,1,Đã bật thuộc tính occluded=true chuẩn xác
+GTS14,d2,geometry:polygon khoanh phần nhìn thấy của mặt biển nguy hiểm,major,geometry,danger [blurred=false;occluded=true;truncated=false]×1,1,Polygon khoanh phần thấy được
+GTS15,d1,label=mandatory occluded=false truncated=true blurred=false x1,critical,decision,mandatory [blurred=false;occluded=false;truncated=true]×1,1,Đã bật thuộc tính truncated=true
+GTS15,d2,geometry:polygon sát viền cắt của mặt biển hiệu lệnh,major,geometry,mandatory [blurred=false;occluded=false;truncated=true]×1,1,Polygon dừng sát mép ảnh
+GTS16,d1,label=other occluded=false truncated=false blurred=true x1,minor,decision,other [blurred=true;occluded=false;truncated=false]×1,1,Đã gán label other và blurred=true
+GTS16,d2,label=supplementary occluded=false truncated=false blurred=false x1,major,decision,supplementary [blurred=false;occluded=false;truncated=false]×1,1,Đã gán nhãn supplementary cho biển phụ
+GTS17,d1,label=prohibitory occluded=false truncated=false blurred=true x1,critical,decision,prohibitory [blurred=true;occluded=false;truncated=false]×1,1,Đã gán nhãn prohibitory kèm blurred=true
+GTS17,d2,geometry:polygon ôm sát viền biển lóa sáng,major,geometry,prohibitory [blurred=true;occluded=false;truncated=false]×1,1,Polygon ôm sát viền biển lóa
