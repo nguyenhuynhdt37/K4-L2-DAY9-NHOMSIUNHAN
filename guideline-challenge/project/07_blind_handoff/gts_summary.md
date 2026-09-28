@@ -9,5 +9,5 @@
 | **GTS** | **39.5** | 0.60D + 0.20C + 0.10G + 0.10I |
 
 - Critical escapes: 3
-- Frozen at: 2026-09-26T09:17:21Z
+- Frozen at: 2026-09-28T02:58:02Z
 - GTS đo khả năng truyền đạt của specification, không đo kỹ năng tổng quát của peer annotator.
