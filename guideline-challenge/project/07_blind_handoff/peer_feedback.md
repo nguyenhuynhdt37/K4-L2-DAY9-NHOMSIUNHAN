@@ -2,25 +2,25 @@
 
 Phần 1 do **nhóm peer** trả lời (gửi kèm file export). Phần 2 do **nhóm owner** điền. Thay mọi placeholder mới là xong (gate G5).
 
-- **Nhóm peer:** Nhóm 2B - Evaluator Team
-- **Người label blind:** Lê Văn B, Trần Văn C
+- **Nhóm peer:** Nhóm Peer Evaluators
+- **Người label blind:** Peer Annotators
 
 ## 1. Peer trả lời
 
 1. **Rule nào rõ nhất / giúp quyết định nhanh nhất?**
-   Quy tắc gán nhãn khung 5 lớp GTSDB chính (prohibitory, mandatory, danger, supplementary, other) với các ví dụ hình ảnh kèm theo rõ ràng giúp xác định nhãn nhanh chóng.
+   Taxonomy rõ ràng, dễ hiểu.
 
 2. **Rule nào mơ hồ hoặc phải tự suy diễn?**
-   Quy tắc xác định biển báo bị che khuất một phần bởi chướng ngại vật (cành cây, cột đèn): Chưa định nghĩa rõ ngưỡng phần trăm che khuất nào thì bật thuộc tính `occluded=true` và mức che khuất nào thì bỏ qua.
+   Trong trường hợp mình có thể tự suy đoán được loại biển dựa vào hình dáng mà nó bị quay lưng thì trong guideline không được nhắc đến.
 
 3. **Sample nào khiến guideline "vỡ"?**
-   Sample chứa biển báo phụ (`supplementary`) kích thước nhỏ nằm bên dưới biển báo chính, bị bóng râm che mờ khiến annotator phân vân giữa nhãn `supplementary` và `other`.
+   Hiện chưa có sample nào như vậy.
 
 4. **Attribute / default nào trong CVAT dễ gây thao tác sai?**
-   Thuộc tính `occluded` mặc định trong CVAT để `false`. Khi thao tác gán nhãn nhanh trên hàng loạt biển báo bị bóng cây che khuất nhẹ, annotator dễ quên tích chọn thuộc tính `occluded`.
+   Blurred hơi bị khó hiểu do không có định nghĩa như thế nào là mờ (ví dụ: kích thước nhỏ quá, <16px).
 
 5. **Một thay đổi cụ thể giúp annotator mới ít hỏi hơn?**
-   Bổ sung ngưỡng che khuất định lượng cụ thể: Biển báo bị che từ 10% đến 90% diện tích bề mặt phải gán nhãn và bật `occluded=true`; biển báo bị che quá 90% hoặc hoàn toàn mất dạng thì mới không gán nhãn.
+   Thêm trường hợp và hướng giải quyết vụ biển bị quay lưng nhưng có thể đoán được là occluded.
 
 ## 2. Owner phân loại
 
@@ -28,6 +28,6 @@ Owner không tranh luận để bảo vệ guideline. Mỗi feedback và mỗi d
 
 | Feedback / decision sai | Nguyên nhân (guideline gap / data ambiguity / execution error) | Xử lý (accept + revise / reject with evidence / add escalation rule) | Bằng chứng |
 |---|---|---|---|
-| Bỏ sót thuộc tính occluded khi biển bị cành cây che 15% bề mặt | guideline gap | accept + revise (bổ sung rõ quy định ngưỡng che khuất >= 10% phải đánh occluded=true vào Guideline v3) | Sample_Calib_03 & Peer_Task_15 |
-| Annotator vẽ polygon/box trùm cả cọc cắm biển báo | execution error | reject with evidence (trích dẫn Mục 3.1 Guideline: chỉ gán nhãn đúng viền hình học của mặt biển báo, không bao gồm cọc/giá đỡ) | Guideline Sec 3.1 & Example_01 |
-| Gán nhầm biển báo phụ nhỏ ở dưới thành nhãn `other` | data ambiguity | add escalation rule (bổ sung bảng minh họa các loại biển phụ supplementary phổ biến kèm quy tắc leo thang khi ảnh mờ) | Sample_Calib_05 |
+| Chưa rõ quy định gán nhãn biển báo bị quay mặt lưng | guideline gap | accept + revise (Bổ sung rõ quy tắc phân loại biển quay mặt lưng vào Guideline v3) | Peer Feedback Câu 2 & 5 |
+| Định nghĩa thuộc tính blurred chưa có ngưỡng định lượng cụ thể | guideline gap | accept + revise (Bổ sung rõ ngưỡng kích thước <16px chọn mờ blurred=true vào Guideline v3) | Peer Feedback Câu 4 |
+| Bỏ sót thuộc tính occluded=true khi biển bị che khuất | execution error | reject with evidence (Nhắc lại Mục 3.1 Guideline v3: biển che >= 10% bề mặt phải tích occluded=true) | Transfer Score GTS14/d1 |

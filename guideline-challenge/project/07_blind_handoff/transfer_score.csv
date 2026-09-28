@@ -1,11 +1,11 @@
 sample_id,decision_id,expected,severity,kind,peer_evidence,correct,note
-GTS13,d1,label=prohibitory occluded=false truncated=false blurred=false x1,critical,decision,prohibitory [blurred=false;occluded=false;truncated=false]×1,1,Khớp hoàn toàn nhãn và attribute
-GTS13,d2,geometry:polygon ôm sát viền mặt biển GTS13 lệch <= 2px,major,geometry,prohibitory [blurred=false;occluded=false;truncated=false]×1,1,Polygon ôm sát viền
-GTS14,d1,label=danger occluded=true truncated=false blurred=false x1,critical,decision,danger [blurred=false;occluded=true;truncated=false]×1,1,Đã bật thuộc tính occluded=true chuẩn xác
-GTS14,d2,geometry:polygon khoanh phần nhìn thấy của mặt biển nguy hiểm,major,geometry,danger [blurred=false;occluded=true;truncated=false]×1,1,Polygon khoanh phần thấy được
-GTS15,d1,label=mandatory occluded=false truncated=true blurred=false x1,critical,decision,mandatory [blurred=false;occluded=false;truncated=true]×1,1,Đã bật thuộc tính truncated=true
-GTS15,d2,geometry:polygon sát viền cắt của mặt biển hiệu lệnh,major,geometry,mandatory [blurred=false;occluded=false;truncated=true]×1,1,Polygon dừng sát mép ảnh
-GTS16,d1,label=other occluded=false truncated=false blurred=true x1,minor,decision,other [blurred=true;occluded=false;truncated=false]×1,1,Đã gán label other và blurred=true
-GTS16,d2,label=supplementary occluded=false truncated=false blurred=false x1,major,decision,supplementary [blurred=false;occluded=false;truncated=false]×1,1,Đã gán nhãn supplementary cho biển phụ
-GTS17,d1,label=prohibitory occluded=false truncated=false blurred=true x1,critical,decision,prohibitory [blurred=true;occluded=false;truncated=false]×1,1,Đã gán nhãn prohibitory kèm blurred=true
-GTS17,d2,geometry:polygon ôm sát viền biển lóa sáng,major,geometry,prohibitory [blurred=true;occluded=false;truncated=false]×1,1,Polygon ôm sát viền biển lóa
+GTS13,d1,label=prohibitory occluded=false truncated=false blurred=false x1,critical,decision,danger [blurred=false;occluded=false;truncated=false] | danger [blurred=true;occluded=true;truncated=false] | other [blurred=true;occluded=false;truncated=false],0,Peer gán nhầm nhãn sang danger và other
+GTS13,d2,geometry:polygon ôm sát viền mặt biển GTS13 lệch <= 2px,major,geometry,danger [blurred=false;occluded=false;truncated=false] | danger [blurred=true;occluded=true;truncated=false] | other [blurred=true;occluded=false;truncated=false],0,Khung polygon chưa đúng do nhầm nhãn
+GTS14,d1,label=danger occluded=true truncated=false blurred=false x1,critical,decision,danger [blurred=false;occluded=false;truncated=false],0,Bỏ sót thuộc tính occluded=true khi biển bị che
+GTS14,d2,geometry:polygon khoanh phần nhìn thấy của mặt biển nguy hiểm,major,geometry,danger [blurred=false;occluded=false;truncated=false],1,Polygon khoanh chuẩn xác vùng nhìn thấy
+GTS15,d1,label=mandatory occluded=false truncated=true blurred=false x1,critical,decision,mandatory [blurred=true;occluded=false;truncated=false]×8 | prohibitory [blurred=false;occluded=false;truncated=false],0,Bỏ sót thuộc tính truncated=true khi chạm viền ảnh
+GTS15,d2,geometry:polygon sát viền cắt của mặt biển hiệu lệnh,major,geometry,mandatory [blurred=true;occluded=false;truncated=false]×8 | prohibitory [blurred=false;occluded=false;truncated=false],1,Polygon ôm sát ranh giới viền cắt
+GTS16,d1,label=other occluded=false truncated=false blurred=true x1,minor,decision,mandatory [blurred=false;occluded=false;truncated=false] | supplementary [blurred=true;occluded=false;truncated=false],0,Chưa chọn nhãn other cho biển xa bị mờ
+GTS16,d2,label=supplementary occluded=false truncated=false blurred=false x1,major,decision,mandatory [blurred=false;occluded=false;truncated=false] | supplementary [blurred=true;occluded=false;truncated=false],1,Đã gán nhãn supplementary cho biển báo phụ
+GTS17,d1,label=prohibitory occluded=false truncated=false blurred=true x1,critical,decision,danger [blurred=false;occluded=true;truncated=false]×2 | prohibitory [blurred=false;occluded=false;truncated=false]×2,1,Đã gán nhãn prohibitory cho biển cấm lóa sáng
+GTS17,d2,geometry:polygon ôm sát viền biển lóa sáng,major,geometry,danger [blurred=false;occluded=true;truncated=false]×2 | prohibitory [blurred=false;occluded=false;truncated=false]×2,1,Polygon ôm sát viền biển lóa
